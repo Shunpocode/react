@@ -25,7 +25,7 @@ function App() {
           {count}
         </h1>
         <div id='buttons'>
-          <button onClick={()=>sumCount('-')} type="button">- Минус123</button>
+          <button onClick={()=>sumCount('-')} type="button">- Минус</button>
           <button onClick={()=>sumCount('+')} type="button">Плюс +</button>
         </div>
       </div>
