@@ -20,7 +20,7 @@ function App() {
   return (
     <div>
       <div id='counter'>
-        <h2>Счётчик:</h2>
+        <h2>Счётчик:jdjdjd</h2>
         <h1>
           {count}
         </h1>
