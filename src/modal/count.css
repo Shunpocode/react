@@ -1,0 +1,50 @@
+h1,h2{margin: 0;}
+h1{font-size: 7rem; }
+h2{color: #556581; font-size: 2rem;}
+#counter{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+#buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#counter button{
+  font-size: 22px;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: white;
+  transition: all 0.05s ease-in-out ;
+  -webkit-transition: all 0.05s ease-in-out ;
+  -moz-transition: all 0.05s ease-in-out ;
+  -ms-transition: all 0.05s ease-in-out ;
+  -o-transition: all 0.05s ease-in-out ;
+}
+#counter button:hover {
+  transform: translateY(-2px);
+}
+#counter button:active {
+    transform: translateY(2px);
+    box-shadow: none !important;
+  }
+#counter button:nth-child(1){
+  background:#e63946;
+  border: 1px solid #991b1f;
+  box-shadow: 0 4px 0 #991b1f;
+}
+#counter button:nth-child(2){
+  background: #2a9d8f;
+  border: 1px solid #226b63;
+  box-shadow: 0 4px 0 #226b63;
+}

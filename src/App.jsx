@@ -1,35 +1,49 @@
 import React from 'react';
 import './App.css';
+import Counts from "./modal/count";
 
 function App() {
-  // let count = 0;
-  const [count, setCount] = React.useState(0);
 
-  function sumCount(sum) {
-    console.log(sum);
-    if(sum === '+'){
-      setCount(count + 1);
-    }
-    if(sum === '-'){
-      if (count !== 0) {
-        setCount(count - 1);
+  let [open, setOpen] = React.useState(false);
+  let [classes, chengeClass] = React.useState('');
+
+  function openedModal(target) {
+    if (target === 'open') {
+      if(!open){
+        setOpen(true);
+        setTimeout(() => {
+
+          chengeClass(classes = 'open')
+
+        }, 30);
       }
+    }
+    if(target === 'close'){
+      chengeClass(classes = '')
+
+      setTimeout(() => {
+        setOpen(false);
+      }, 500);
     }
   }
 
   return (
-    <div>
-      <div id='counter'>
-        <h2>Счётчик:</h2>
-        <h1>
-          {count}
-        </h1>
-        <div id='buttons'>
-          <button onClick={()=>sumCount('-')} type="button">- Минус</button>
-          <button onClick={()=>sumCount('+')} type="button">Плюс +</button>
-        </div>
-      </div>
-    </div>
+    <>
+      <button onClick={()=>openedModal('open')} id='open-modal'>✨ Открыть окно</button>
+      {
+        open && (
+          <div id='overlay' className={classes}>
+            <div id='modal'>
+              <svg onClick={()=> openedModal('close')} xmlns="http://www.w3.org/2000/svg" width="22px" height='22px' viewBox="0 0 30 30" stroke="black">
+                  <line x1="2" y1="2" x2="28" y2="28" strokeWidth="3" strokeLinecap="round"/>
+                  <line x1="28" y1="2" x2="2" y2="28" strokeWidth="3" strokeLinecap="round"/>
+              </svg>
+              <Counts />
+            </div>
+          </div>
+        )
+      }
+    </>
   );
 }
 
