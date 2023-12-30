@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  text-align: center;
+  flex-direction: column;
 }
 #open-modal {
+  margin: 45vh 0;
   background: #fff;
   padding: 18px 25px;
   border-radius: 20px;

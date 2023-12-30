@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import Counts from "./modal/count";
+import Survey from "./survey/survey";
 
 function App() {
 
-  let [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   let [classes, chengeClass] = React.useState('');
 
   function openedModal(target) {
@@ -12,15 +13,12 @@ function App() {
       if(!open){
         setOpen(true);
         setTimeout(() => {
-
           chengeClass(classes = 'open')
-
         }, 30);
       }
     }
     if(target === 'close'){
       chengeClass(classes = '')
-
       setTimeout(() => {
         setOpen(false);
       }, 500);
@@ -43,6 +41,9 @@ function App() {
           </div>
         )
       }
+      <section>
+        <Survey />
+      </section>
     </>
   );
 }
