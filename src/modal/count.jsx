@@ -5,7 +5,6 @@ export default function Counts(params) {
     const [count, setCount] = React.useState(0);
 
   function sumCount(sum) {
-    console.log(sum);
     if(sum === '+'){
       setCount(count + 1);
     }
