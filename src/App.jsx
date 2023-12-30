@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <>
+    <>123
       <button onClick={()=>openedModal('open')} id='open-modal'>✨ Открыть окно</button>
       {
         open && (
