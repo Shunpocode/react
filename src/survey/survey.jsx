@@ -46,7 +46,6 @@ export default function Survey() {
   function StepBlock({question}) {
 
       const onClickVariant = (index) => {
-        console.log(step, index);
         if (index === question.current) {
           checkedCurrent(currents = currents + 1);
         }
@@ -71,7 +70,7 @@ export default function Survey() {
       <>
         <div id="result">
           <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt=""/>
-          <p>Вы отгадали {currents} ответа из {questions.length - currents}</p>
+          <p>Вы отгадали {currents} ответов  из {questions.length}</p>
           <button onClick={() => {setStep(step = 0); pathLine(pathPros = 0); checkedCurrent(currents = 0);}} >
             Попробовать заново
           </button>
